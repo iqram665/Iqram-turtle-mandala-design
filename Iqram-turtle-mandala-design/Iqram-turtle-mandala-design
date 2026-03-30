@@ -1,0 +1,31 @@
+import turtle
+
+# Screen configuration
+s = turtle.Screen()
+s.setup(width=750, height=750)
+s.screensize(750, 750)
+s.bgcolor("black")  # Dark background-e design-ta valo phute
+s.title("Multi-Color Flower Design by IQRAM")
+
+t = turtle.Turtle()
+t.speed(0) 
+t.width(2)
+
+# Multiple Color List (Apnar requested color gulo add korlam)
+colors = ["purple", "pink", "blue", "green", "red", "deepskyblue", "magenta", "orange"]
+
+# Drawing loop
+# Loop range, size base code follow kore optimized
+for i in range(140):
+    t.pencolor(colors[i % 8]) # 8ta colors bar bar cyclic vabe follow hobe
+    
+    # Existing circle pattern drawing code
+    # Apnar code follow kore pattern thik thakche
+    t.circle(190 - i, 90)
+    t.left(90)
+    t.circle(190 - i, 90)
+    t.left(18)
+
+# Click standard window break function
+t.hideturtle()
+s.exitonclick()
